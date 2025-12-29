@@ -1,0 +1,654 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <!-- Basic Meta Tags -->
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+
+    <!-- SEO Meta Tags -->
+    <title>Adesola, This is for you 💜</title>
+    <meta
+      name="description"
+      content="A beautiful, cinematic love proposal website with animations, memories, and a heartfelt question."
+    />
+    <meta
+      name="keywords"
+      content="love, girlfriend, proposal, romantic, relationship, special message"
+    />
+    <meta name="author" content="Awosoji Emmanuel" />
+    <meta name="robots" content="noindex, nofollow" />
+
+    <!-- Open Graph Meta Tags (Facebook, LinkedIn) -->
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="Will You Be My Girlfriend? 💜" />
+    <meta
+      property="og:description"
+      content="A special message I created just for you..."
+    />
+    <meta
+      property="og:image"
+      content="https://images.unsplash.com/photo-1518199266791-5375a83190b7?w=1200&h=630&fit=crop"
+    />
+    <meta property="og:url" content="https://foradesola.com" />
+    <meta property="og:site_name" content="Special Message" />
+
+    <!-- Twitter Card Meta Tags -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Will You Be My Girlfriend? 💜" />
+    <meta
+      name="twitter:description"
+      content="A special message I created just for you..."
+    />
+    <meta
+      name="twitter:image"
+      content="https://images.unsplash.com/photo-1518199266791-5375a83190b7?w=1200&h=630&fit=crop"
+    />
+
+    <!-- Favicon -->
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>💜</text></svg>"
+    />
+    <link
+      rel="apple-touch-icon"
+      href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>💜</text></svg>"
+    />
+
+    <!-- Theme Color -->
+    <meta name="theme-color" content="#7c3aed" />
+    <meta name="msapplication-TileColor" content="#7c3aed" />
+
+    <!-- iOS Meta Tags -->
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta
+      name="apple-mobile-web-app-status-bar-style"
+      content="black-translucent"
+    />
+    <meta name="apple-mobile-web-app-title" content="Special Message 💜" />
+
+    <!-- External Resources -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
+
+    <!-- Preconnect for Performance -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link rel="preconnect" href="https://cdn.tailwindcss.com" />
+  </head>
+  <body>
+    <div class="cursor-glow" id="cursorGlow"></div>
+
+    <!-- Loader -->
+    <div
+      id="loader"
+      class="fixed inset-0 bg-gradient-to-br from-purple-950 via-purple-900 to-black flex items-center justify-center z-50"
+    >
+      <div class="absolute inset-0 opacity-20" id="loaderParticles"></div>
+      <div class="text-center z-10">
+        <div
+          class="text-5xl md:text-7xl font-bold bg-gradient-to-r from-purple-400 via-pink-400 to-purple-400 bg-clip-text text-transparent animate-pulse mb-8"
+        >
+          Loading something special
+        </div>
+        <div class="flex gap-2 justify-center">
+          <div
+            class="w-4 h-4 rounded-full bg-purple-400 animate-bounce-custom"
+          ></div>
+          <div
+            class="w-4 h-4 rounded-full bg-purple-400 animate-bounce-custom"
+            style="animation-delay: 0.16s"
+          ></div>
+          <div
+            class="w-4 h-4 rounded-full bg-purple-400 animate-bounce-custom"
+            style="animation-delay: 0.32s"
+          ></div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Hero Section -->
+    <section
+      id="hero"
+      class="min-h-screen flex items-center justify-center relative overflow-hidden"
+    >
+      <div
+        class="absolute inset-0 bg-gradient-to-br from-purple-900 via-purple-800 to-black"
+        id="heroBackground"
+      ></div>
+
+      <div class="relative z-10 text-center px-6 max-w-4xl">
+        <div class="mb-8 animate-fadeIn">
+          <svg
+            class="inline-block text-purple-400 w-12 h-12 mb-4"
+            fill="currentColor"
+            viewBox="0 0 20 20"
+          >
+            <path
+              d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"
+            />
+          </svg>
+        </div>
+        <h1 class="text-6xl md:text-8xl font-bold mb-6 leading-tight">
+          <span
+            class="inline-block animate-slideUp bg-gradient-to-r from-purple-300 via-pink-300 to-purple-300 bg-clip-text text-transparent"
+          >
+            A Special
+          </span>
+          <br />
+          <span
+            class="inline-block animate-slideUp bg-gradient-to-r from-pink-300 via-purple-300 to-pink-300 bg-clip-text text-transparent"
+            style="animation-delay: 0.2s"
+          >
+            Message For You
+          </span>
+        </h1>
+        <p
+          class="text-xl md:text-2xl text-purple-200 mb-12 animate-fadeIn"
+          style="animation-delay: 0.4s"
+        >
+          Something I've been meaning to tell you...
+        </p>
+        <button
+          onclick="scrollToSection('story')"
+          class="btn-primary px-12 py-4 bg-gradient-to-r from-purple-600 to-pink-600 rounded-full text-xl font-semibold transform transition-all duration-300 hover:scale-110 hover:shadow-2xl hover:shadow-purple-500/50"
+        >
+          <span>Begin Journey</span>
+        </button>
+      </div>
+    </section>
+
+    <!-- Story Timeline -->
+    <section
+      id="story"
+      class="min-h-screen py-32 px-6 bg-gradient-to-b from-black via-purple-950 to-black relative"
+    >
+      <div class="max-w-4xl mx-auto">
+        <h2
+          class="text-5xl md:text-7xl font-bold mb-20 text-center bg-gradient-to-r from-purple-400 to-pink-400 bg-clip-text text-transparent reveal"
+        >
+          Our Story
+        </h2>
+
+        <div class="space-y-32">
+          <div class="relative pl-12 border-l-4 border-purple-500 reveal">
+            <div
+              class="absolute -left-3 top-0 w-6 h-6 rounded-full bg-purple-500 animate-pulse"
+            ></div>
+            <h3 class="text-3xl md:text-4xl font-bold text-purple-300 mb-4">
+              The First Time I Saw You
+            </h3>
+            <p class="text-xl text-purple-100 leading-relaxed">
+              When I resumed school in Ede, we were both in ND1. We didn’t like
+              each other at all. We were like cat and rat — always fighting,
+              always clashing. I even made a poster and a DJ music about you…
+              and you trended in our department. Back then, love was the last
+              thing on my mind.
+            </p>
+          </div>
+
+          <div class="relative pl-12 border-l-4 border-purple-500 reveal">
+            <div
+              class="absolute -left-3 top-0 w-6 h-6 rounded-full bg-purple-500 animate-pulse"
+            ></div>
+            <h3 class="text-3xl md:text-4xl font-bold text-purple-300 mb-4">
+              How Everything Changed
+            </h3>
+            <p class="text-xl text-purple-100 leading-relaxed">
+              After school ended, something unexpected happened. Early this year
+              — around April — we started talking. Really talking. Long chats.
+              Late-night calls. Sharing secrets we never told anyone else.
+              Somewhere in those conversations, the fights faded… and something
+              deeper grew.
+            </p>
+          </div>
+
+          <div class="relative pl-12 border-l-4 border-purple-500 reveal">
+            <div
+              class="absolute -left-3 top-0 w-6 h-6 rounded-full bg-purple-500 animate-pulse"
+            ></div>
+            <h3 class="text-3xl md:text-4xl font-bold text-purple-300 mb-4">
+              Falling Without Realizing
+            </h3>
+            <p class="text-xl text-purple-100 leading-relaxed">
+              It wasn’t sudden. It wasn’t planned. But the more we talked, the
+              more I found myself caring. Then we both gained admission into the
+              university — Direct Entry into OAU, Computer Engineering. And
+              somehow, my feelings for you grew even stronger. What started as
+              nothing slowly became everything.
+            </p>
+          </div>
+
+          <div class="relative pl-12 border-l-4 border-purple-500 reveal">
+            <div
+              class="absolute -left-3 top-0 w-6 h-6 rounded-full bg-purple-500 animate-pulse"
+            ></div>
+            <h3 class="text-3xl md:text-4xl font-bold text-purple-300 mb-4">
+              Right Now
+            </h3>
+            <p class="text-xl text-purple-100 leading-relaxed">
+              So here I am. Honest. Certain. And unafraid. Ready to tell you how
+              I truly feel...
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Memories Gallery -->
+    <section
+      id="memories"
+      class="min-h-screen py-32 px-6 bg-gradient-to-b from-black via-purple-900 to-black"
+    >
+      <div class="max-w-7xl mx-auto">
+        <div class="text-center mb-20 reveal">
+          <svg
+            class="inline-block text-purple-400 w-12 h-12 mb-4"
+            fill="none"
+            stroke="currentColor"
+            viewBox="0 0 24 24"
+          >
+            <path
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              stroke-width="2"
+              d="M3 9a2 2 0 012-2h.93a2 2 0 001.664-.89l.812-1.22A2 2 0 0110.07 4h3.86a2 2 0 011.664.89l.812 1.22A2 2 0 0018.07 7H19a2 2 0 012 2v9a2 2 0 01-2 2H5a2 2 0 01-2-2V9z"
+            />
+            <path
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              stroke-width="2"
+              d="M15 13a3 3 0 11-6 0 3 3 0 016 0z"
+            />
+          </svg>
+          <h2
+            class="text-5xl md:text-7xl font-bold bg-gradient-to-r from-purple-400 to-pink-400 bg-clip-text text-transparent"
+          >
+            Our Memories
+          </h2>
+          <p class="text-xl text-purple-200 mt-4">Moments I cherish forever</p>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+          <!-- Memory 1 - Replace with your image -->
+          <div class="memory-card aspect-square reveal">
+            <img
+              src="https://images.unsplash.com/photo-1516589178581-6cd7833ae3b2?w=800&h=800&fit=crop"
+              alt="Romantic coffee date"
+            />
+            <div class="memory-overlay">
+              <div>
+                <p class="text-lg font-semibold text-white">
+                  First coffee together
+                </p>
+                <p class="text-sm text-purple-300 mt-1">
+                  Replace: /path/to/your-photo1.jpg
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Memory 2 - Replace with your video -->
+          <div class="memory-card aspect-square reveal">
+            <video muted loop playsinline>
+              <source
+                src="https://assets.mixkit.co/videos/preview/mixkit-couple-walking-on-the-beach-at-sunset-4614-large.mp4"
+                type="video/mp4"
+              />
+            </video>
+            <div class="memory-overlay">
+              <div>
+                <p class="text-lg font-semibold text-white">That sunset walk</p>
+                <p class="text-sm text-purple-300 mt-1">
+                  Replace: /path/to/your-video1.mp4
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Memory 3 - Replace with your image -->
+          <div class="memory-card aspect-square reveal">
+            <img
+              src="https://images.unsplash.com/photo-1522556189639-b150ed9c4330?w=800&h=800&fit=crop"
+              alt="Beautiful smile"
+            />
+            <div class="memory-overlay">
+              <div>
+                <p class="text-lg font-semibold text-white">
+                  Your beautiful smile
+                </p>
+                <p class="text-sm text-purple-300 mt-1">
+                  Replace: /path/to/your-photo2.jpg
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Memory 4 - Replace with your image -->
+          <div class="memory-card aspect-square reveal">
+            <img
+              src="https://images.unsplash.com/photo-1511988617509-a57c8a288659?w=800&h=800&fit=crop"
+              alt="Late night talks"
+            />
+            <div class="memory-overlay">
+              <div>
+                <p class="text-lg font-semibold text-white">
+                  Late night conversations
+                </p>
+                <p class="text-sm text-purple-300 mt-1">
+                  Replace: /path/to/your-photo3.jpg
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Memory 5 - Replace with your video -->
+          <div class="memory-card aspect-square reveal">
+            <video muted loop playsinline>
+              <source
+                src="https://assets.mixkit.co/videos/preview/mixkit-rain-falling-on-the-water-of-a-lake-2104-large.mp4"
+                type="video/mp4"
+              />
+            </video>
+            <div class="memory-overlay">
+              <div>
+                <p class="text-lg font-semibold text-white">
+                  Dancing in the rain
+                </p>
+                <p class="text-sm text-purple-300 mt-1">
+                  Replace: /path/to/your-video2.mp4
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Memory 6 - Replace with your image -->
+          <div class="memory-card aspect-square reveal">
+            <img
+              src="https://images.unsplash.com/photo-1501594907352-04cda38ebc29?w=800&h=800&fit=crop"
+              alt="Adventures"
+            />
+            <div class="memory-overlay">
+              <div>
+                <p class="text-lg font-semibold text-white">
+                  Adventure together
+                </p>
+                <p class="text-sm text-purple-300 mt-1">
+                  Replace: /path/to/your-photo4.jpg
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Interactive Hidden Messages -->
+    <section
+      id="messages"
+      class="min-h-screen py-32 px-6 bg-gradient-to-b from-black via-purple-950 to-black flex items-center justify-center"
+    >
+      <div class="max-w-7xl mx-auto text-center">
+        <h2
+          class="text-5xl md:text-7xl font-bold mb-12 bg-gradient-to-r from-purple-400 to-pink-400 bg-clip-text text-transparent reveal"
+        >
+          Hidden Feelings
+        </h2>
+        <p class="text-xl text-purple-200 mb-16 reveal">
+          Tap each card to reveal what's in my heart
+        </p>
+
+        <div class="grid grid-cols-2 gap-6">
+          <div class="message-card" onclick="revealMessage(this)">
+            <div
+              class="card-front bg-gradient-to-br from-purple-900 to-purple-950 border-2 border-purple-500/30"
+            >
+              <svg
+                class="w-12 h-12 text-purple-400"
+                fill="currentColor"
+                viewBox="0 0 20 20"
+              >
+                <path
+                  fill-rule="evenodd"
+                  d="M3.172 5.172a4 4 0 015.656 0L10 6.343l1.172-1.171a4 4 0 115.656 5.656L10 17.657l-6.828-6.829a4 4 0 010-5.656z"
+                  clip-rule="evenodd"
+                />
+              </svg>
+            </div>
+            <div class="card-back">
+              <p class="text-md md:text-xl md:text-2xl font-bold text-white">
+               I never thought I’d care for the girl I fought with.
+              </p>
+            </div>
+          </div>
+
+          <div class="message-card" onclick="revealMessage(this)">
+            <div
+              class="card-front bg-gradient-to-br from-purple-900 to-purple-950 border-2 border-purple-500/30"
+            >
+              <svg
+                class="w-12 h-12 text-purple-400"
+                fill="currentColor"
+                viewBox="0 0 20 20"
+              >
+                <path
+                  fill-rule="evenodd"
+                  d="M3.172 5.172a4 4 0 015.656 0L10 6.343l1.172-1.171a4 4 0 115.656 5.656L10 17.657l-6.828-6.829a4 4 0 010-5.656z"
+                  clip-rule="evenodd"
+                />
+              </svg>
+            </div>
+            <div class="card-back">
+              <p class="text-md md:text-xl md:text-2xl font-bold text-white">
+                Those long calls made my heart choose you.
+              </p>
+            </div>
+          </div>
+
+          <div class="message-card" onclick="revealMessage(this)">
+            <div
+              class="card-front bg-gradient-to-br from-purple-900 to-purple-950 border-2 border-purple-500/30"
+            >
+              <svg
+                class="w-12 h-12 text-purple-400"
+                fill="currentColor"
+                viewBox="0 0 20 20"
+              >
+                <path
+                  fill-rule="evenodd"
+                  d="M3.172 5.172a4 4 0 015.656 0L10 6.343l1.172-1.171a4 4 0 115.656 5.656L10 17.657l-6.828-6.829a4 4 0 010-5.656z"
+                  clip-rule="evenodd"
+                />
+              </svg>
+            </div>
+            <div class="card-back">
+              <p class="text-md md:text-xl md:text-2xl font-bold text-white">
+                You know my secrets and dreams, and you stayed.
+              </p>
+            </div>
+          </div>
+
+          <div class="message-card" onclick="revealMessage(this)">
+            <div
+              class="card-front bg-gradient-to-br from-purple-900 to-purple-950 border-2 border-purple-500/30"
+            >
+              <svg
+                class="w-12 h-12 text-purple-400"
+                fill="currentColor"
+                viewBox="0 0 20 20"
+              >
+                <path
+                  fill-rule="evenodd"
+                  d="M3.172 5.172a4 4 0 015.656 0L10 6.343l1.172-1.171a4 4 0 115.656 5.656L10 17.657l-6.828-6.829a4 4 0 010-5.656z"
+                  clip-rule="evenodd"
+                />
+              </svg>
+            </div>
+            <div class="card-back">
+              <p class="text-md md:text-xl md:text-2xl font-bold text-white">
+                From Ede to OAU, growing together feels special.
+              </p>
+            </div>
+          </div>
+
+          <div class="message-card" onclick="revealMessage(this)">
+            <div
+              class="card-front bg-gradient-to-br from-purple-900 to-purple-950 border-2 border-purple-500/30"
+            >
+              <svg
+                class="w-12 h-12 text-purple-400"
+                fill="currentColor"
+                viewBox="0 0 20 20"
+              >
+                <path
+                  fill-rule="evenodd"
+                  d="M3.172 5.172a4 4 0 015.656 0L10 6.343l1.172-1.171a4 4 0 115.656 5.656L10 17.657l-6.828-6.829a4 4 0 010-5.656z"
+                  clip-rule="evenodd"
+                />
+              </svg>
+            </div>
+            <div class="card-back">
+              <p class="text-md md:text-xl md:text-2xl font-bold text-white">
+                Being with you feels easy, safe, and right.
+              </p>
+            </div>
+          </div>
+
+          <div class="message-card" onclick="revealMessage(this)">
+            <div
+              class="card-front bg-gradient-to-br from-purple-900 to-purple-950 border-2 border-purple-500/30"
+            >
+              <svg
+                class="w-12 h-12 text-purple-400"
+                fill="currentColor"
+                viewBox="0 0 20 20"
+              >
+                <path
+                  fill-rule="evenodd"
+                  d="M3.172 5.172a4 4 0 015.656 0L10 6.343l1.172-1.171a4 4 0 115.656 5.656L10 17.657l-6.828-6.829a4 4 0 010-5.656z"
+                  clip-rule="evenodd"
+                />
+              </svg>
+            </div>
+            <div class="card-back">
+              <p class="text-md md:text-xl md:text-2xl font-bold text-white">
+                This isn’t a joke, a trend, or a moment. It’s how I truly feel
+                about you.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Typing Animation Section -->
+    <section
+      id="typing"
+      class="min-h-screen py-32 px-6 bg-gradient-to-b from-black via-purple-950 to-black flex items-center justify-center"
+    >
+      <div class="max-w-3xl mx-auto">
+        <div
+          id="typingText"
+          class="text-2xl md:text-4xl leading-relaxed text-purple-100 font-light"
+        ></div>
+      </div>
+    </section>
+
+    <!-- Final Question -->
+    <section
+      id="question"
+      class="min-h-screen flex items-center justify-center relative overflow-hidden bg-black"
+    >
+      <div
+        class="absolute inset-0 bg-gradient-to-br from-purple-950 via-black to-purple-950"
+      >
+        <div class="absolute inset-0 opacity-30" id="stars"></div>
+      </div>
+
+      <div class="relative z-10 text-center px-6 max-w-4xl">
+        <div id="questionContent">
+          <h2 class="text-5xl md:text-8xl font-bold mb-12 leading-tight">
+            <span
+              class="inline-block bg-gradient-to-r from-purple-300 via-pink-300 to-purple-300 bg-clip-text text-transparent animate-glow"
+            >
+              Adesola
+            </span>
+            <span
+              class="inline-block bg-gradient-to-r from-purple-300 via-pink-300 to-purple-300 bg-clip-text text-transparent animate-glow"
+            >
+              Will you be
+            </span>
+            <br />
+            <span
+              class="inline-block bg-gradient-to-r from-pink-300 via-purple-300 to-pink-300 bg-clip-text text-transparent animate-glow"
+              style="animation-delay: 0.3s"
+            >
+              my girlfriend?
+            </span>
+          </h2>
+
+          <div class="flex flex-col sm:flex-row gap-6 justify-center">
+            <button
+              onclick="handleYes()"
+              class="btn-primary px-16 py-6 bg-gradient-to-r from-purple-600 to-pink-600 rounded-full text-2xl font-bold transform transition-all duration-300 hover:scale-110 hover:shadow-2xl hover:shadow-purple-500/50"
+            >
+              <span>YES 💜</span>
+            </button>
+
+            <button
+              class="px-16 py-6 bg-transparent border-2 border-purple-500 rounded-full text-2xl font-bold transform transition-all duration-300 hover:scale-110 hover:bg-purple-900/30"
+            >
+              LET'S TALK
+            </button>
+          </div>
+        </div>
+
+        <div id="successContent" class="hidden success-message">
+          <div class="text-8xl mb-8">💜✨💜</div>
+          <h3
+            class="text-5xl md:text-8xl font-bold bg-gradient-to-r from-purple-300 to-pink-300 bg-clip-text text-transparent mb-6"
+          >
+            You Made Me
+          </h3>
+          <h3
+            class="text-5xl md:text-8xl font-bold bg-gradient-to-r from-pink-300 to-purple-300 bg-clip-text text-transparent mb-12"
+          >
+            The Happiest Person!
+          </h3>
+          <p class="text-2xl text-purple-200">
+            I can't wait to start this journey with you 💜
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <div
+      id="confettiContainer"
+      class="fixed inset-0 pointer-events-none z-50"
+    ></div>
+
+    <script src="main.js"></script>
+  </body>
+</html>
+
+<!--
+========================================
+INSTRUCTIONS TO REPLACE IMAGES/VIDEOS:
+========================================
+
+1. Replace the src attribute in the img tags with your own image paths
+2. Replace the src attribute in the video source tags with your own video paths
+3. Keep the aspect-square class for consistent sizing
+4. Recommended image size: 800x800px for best quality
+5. Supported video formats: MP4, WebM
+
+Example:
+<img src="your-folder/my-photo.jpg" alt="Description">
+<video><source src="your-folder/my-video.mp4" type="video/mp4"></video>
+-->
