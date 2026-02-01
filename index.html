@@ -277,14 +277,19 @@
           </p>
         </div>
 
-        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8"
-
-        >
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           <!-- Memory Card 1 - Video -->
-          <div class="memory-card aspect-[3/4] reveal cursor-pointer"
-          onclick="toggleVideo(this)"
+          <div
+            class="memory-card aspect-[3/4] reveal cursor-pointer"
+            onclick="toggleVideo(this)"
           >
-            <video muted loop playsinline class="w-full h-full object-cover">
+            <video
+              loop
+              playsinline
+              preload="auto"
+              poster="./assets/covervideo1.jpeg"
+              class="w-full h-full object-cover"
+            >
               <source src="./assets/video4.mp4" , type="video/mp4" />
               Your browser does not support the video tag.
             </video>
@@ -356,7 +361,13 @@
             class="memory-card aspect-[3/4] reveal cursor-pointer"
             onclick="toggleVideo(this)"
           >
-            <video muted loop playsinline class="w-full h-full object-cover">
+            <video
+              loop
+              playsinline
+              preload="auto"
+              poster="./assets/covervideo2.jpeg"
+              class="w-full h-full object-cover"
+            >
               <source src="./assets/video1.mp4" , type="video/mp4" />
               Your browser does not support the video tag.
             </video>
@@ -387,7 +398,13 @@
             class="memory-card aspect-[3/4] reveal cursor-pointer"
             onclick="toggleVideo(this)"
           >
-            <video muted loop playsinline class="w-full h-full object-cover">
+            <video
+              loop
+              playsinline
+              preload="auto"
+              poster="./assets/covervideo3.jpeg"
+              class="w-full h-full object-cover"
+            >
               <source src="./assets/video2.mp4" type="video/mp4" />
               Your browser does not support the video tag.
             </video>

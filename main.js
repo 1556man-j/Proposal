@@ -78,36 +78,36 @@ function reveal() {
 }
 
 // === VIDEO AUTOPLAY ON HOVER ===
-function setupVideoHover() {
-  const videos = document.querySelectorAll(".memory-card video");
-  videos.forEach((video) => {
-    const card = video.closest(".memory-card");
+// function setupVideoHover() {
+//   const videos = document.querySelectorAll(".memory-card video");
+//   videos.forEach((video) => {
+//     const card = video.closest(".memory-card");
 
-    // Desktop hover
-    card.addEventListener("mouseenter", () => {
-      video.play();
-    });
+//     // Desktop hover
+//     card.addEventListener("mouseenter", () => {
+//       video.play();
+//     });
 
-    card.addEventListener("mouseleave", () => {
-      video.pause();
-      video.currentTime = 0;
-    });
+//     card.addEventListener("mouseleave", () => {
+//       video.pause();
+//       video.currentTime = 0;
+//     });
 
-    // Mobile touch
-    if ("ontouchstart" in window) {
-      card.addEventListener("touchstart", () => {
-        video.play();
-      });
+//     // Mobile touch
+//     if ("ontouchstart" in window) {
+//       card.addEventListener("touchstart", () => {
+//         video.play();
+//       });
 
-      card.addEventListener("touchend", () => {
-        setTimeout(() => {
-          video.pause();
-          video.currentTime = 0;
-        }, 3000);
-      });
-    }
-  });
-}
+//       card.addEventListener("touchend", () => {
+//         setTimeout(() => {
+//           video.pause();
+//           video.currentTime = 0;
+//         }, 3000);
+//       });
+//     }
+//   });
+// }
 
 // === REVEAL HIDDEN MESSAGE CARDS ===
 function revealMessage(card) {
@@ -238,6 +238,10 @@ const galleries = [
         src: "./assets/smile6.jpeg",
         caption: "Genuine joy",
       },
+      {
+        src: "./assets/smile7.jpeg",
+        caption: "Miss engineer",
+      },
     ],
   },
   // Gallery 3 - Late Nights
@@ -346,6 +350,15 @@ const galleries = [
         src: "./assets/together7.jpeg",
         caption: "Perfect moments",
       },
+       {
+        src: "./assets/together8.jpeg",
+        caption: "Perfect moments",
+      },
+      {
+        src: "./assets/together9.jpeg",
+        caption: "Perfect moments",
+      },
+
     ],
   },
 ];
@@ -537,9 +550,7 @@ window.addEventListener("load", () => {
   // Initial reveal check
   reveal();
 
-  // Setup video hover effects
-  setupVideoHover();
-
+  // Setup video toggke effects
   toggleVideo(document.querySelector('.memory-card'));
 });
 
