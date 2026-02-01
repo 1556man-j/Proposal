@@ -446,6 +446,22 @@ function nextImage() {
   updateGalleryDisplay();
 }
 
+// === TOGGLE VIDEO PLAY/PAUSE ON CLICK ===
+function toggleVideo(card) {
+  const video = card.querySelector('video');
+  const playIcon = card.querySelector('.video-play-icon');
+
+  if (video.paused) {
+    video.play();
+    video.classList.add('playing');
+    if (playIcon) playIcon.style.opacity = '0';
+  } else {
+    video.pause();
+    video.classList.remove('playing');
+    if (playIcon) playIcon.style.opacity = '1';
+  }
+}
+
 // === KEYBOARD NAVIGATION ===
 document.addEventListener("keydown", (e) => {
   const modal = document.getElementById("galleryModal");
@@ -465,20 +481,31 @@ document.getElementById("galleryModal").addEventListener("click", (e) => {
 
 // === HANDLE YES BUTTON ===
 function handleYes() {
-  // Create confetti explosion
   createConfetti();
 
-  // Optional: Play celebration sound
-  // const audio = new Audio('path/to/celebration-sound.mp3');
-  // audio.play();
+  // Play sound with fallback
+  try {
+    const audio = new Audio('./assets/celebration.mp3');
+    audio.volume = 0.7;
 
-  // Show success message after brief delay
+    // Play and handle autoplay restrictions
+    const playPromise = audio.play();
+
+    if (playPromise !== undefined) {
+      playPromise.catch(error => {
+        // Autoplay was prevented
+        console.log('Audio autoplay prevented:', error);
+      });
+    }
+  } catch (error) {
+    console.log('Audio error:', error);
+  }
+
   setTimeout(() => {
     document.getElementById("questionContent").style.display = "none";
     document.getElementById("successContent").classList.remove("hidden");
   }, 500);
 
-  // Additional confetti bursts
   setTimeout(createConfetti, 1000);
   setTimeout(createConfetti, 2000);
   setTimeout(createConfetti, 3000);
@@ -512,6 +539,8 @@ window.addEventListener("load", () => {
 
   // Setup video hover effects
   setupVideoHover();
+
+  toggleVideo(document.querySelector('.memory-card'));
 });
 
 // === SCROLL EVENT LISTENERS ===

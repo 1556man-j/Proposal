@@ -277,9 +277,13 @@
           </p>
         </div>
 
-        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8"
+
+        >
           <!-- Memory Card 1 - Video -->
-          <div class="memory-card aspect-[3/4] reveal cursor-pointer">
+          <div class="memory-card aspect-[3/4] reveal cursor-pointer"
+          onclick="toggleVideo(this)"
+          >
             <video muted loop playsinline class="w-full h-full object-cover">
               <source src="./assets/video4.mp4" , type="video/mp4" />
               Your browser does not support the video tag.
@@ -289,8 +293,20 @@
                 <p class="text-lg font-semibold text-white">
                   Our Video Together
                 </p>
-                <p class="text-sm text-purple-300 mt-1">hover on it to play</p>
+                <p class="text-sm text-purple-300 mt-1">Click to play/pause</p>
               </div>
+            </div>
+            <!-- Play/Pause Icon -->
+            <div class="video-play-icon">
+              <svg
+                class="w-16 h-16 text-white"
+                fill="currentColor"
+                viewBox="0 0 20 20"
+              >
+                <path
+                  d="M6.3 2.841A1.5 1.5 0 004 4.11V15.89a1.5 1.5 0 002.3 1.269l9.344-5.89a1.5 1.5 0 000-2.538L6.3 2.84z"
+                />
+              </svg>
             </div>
           </div>
 
@@ -336,7 +352,10 @@
           </div>
 
           <!-- Memory Card 4 -->
-          <div class="memory-card aspect-[3/4] reveal cursor-pointer">
+          <div
+            class="memory-card aspect-[3/4] reveal cursor-pointer"
+            onclick="toggleVideo(this)"
+          >
             <video muted loop playsinline class="w-full h-full object-cover">
               <source src="./assets/video1.mp4" , type="video/mp4" />
               Your browser does not support the video tag.
@@ -346,15 +365,30 @@
                 <p class="text-lg font-semibold text-white">
                   Our Video Together
                 </p>
-                <p class="text-sm text-purple-300 mt-1">hover on it to play</p>
+                <p class="text-sm text-purple-300 mt-1">Click to play/pause</p>
               </div>
+            </div>
+            <!-- Play/Pause Icon -->
+            <div class="video-play-icon">
+              <svg
+                class="w-16 h-16 text-white"
+                fill="currentColor"
+                viewBox="0 0 20 20"
+              >
+                <path
+                  d="M6.3 2.841A1.5 1.5 0 004 4.11V15.89a1.5 1.5 0 002.3 1.269l9.344-5.89a1.5 1.5 0 000-2.538L6.3 2.84z"
+                />
+              </svg>
             </div>
           </div>
 
           <!-- Memory Card 5 -->
-          <div class="memory-card aspect-[3/4] reveal cursor-pointer">
+          <div
+            class="memory-card aspect-[3/4] reveal cursor-pointer"
+            onclick="toggleVideo(this)"
+          >
             <video muted loop playsinline class="w-full h-full object-cover">
-              <source src="./assets/video2.mp4" , type="video/mp4" />
+              <source src="./assets/video2.mp4" type="video/mp4" />
               Your browser does not support the video tag.
             </video>
             <div class="memory-overlay">
@@ -362,8 +396,20 @@
                 <p class="text-lg font-semibold text-white">
                   Our Video Together
                 </p>
-                <p class="text-sm text-purple-300 mt-1">hover on it to play</p>
+                <p class="text-sm text-purple-300 mt-1">Click to play/pause</p>
               </div>
+            </div>
+            <!-- Play/Pause Icon -->
+            <div class="video-play-icon">
+              <svg
+                class="w-16 h-16 text-white"
+                fill="currentColor"
+                viewBox="0 0 20 20"
+              >
+                <path
+                  d="M6.3 2.841A1.5 1.5 0 004 4.11V15.89a1.5 1.5 0 002.3 1.269l9.344-5.89a1.5 1.5 0 000-2.538L6.3 2.84z"
+                />
+              </svg>
             </div>
           </div>
           <!-- Memory Card 6 -->
