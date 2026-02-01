@@ -284,6 +284,53 @@ body {
     transform: translateY(0);
 }
 
+/* === GALLERY MODAL === */
+#galleryModal {
+  backdrop-filter: blur(10px);
+  animation: fadeIn 0.3s ease;
+}
+
+#galleryImage {
+  animation: fadeInScale 0.4s ease;
+}
+
+/* Thumbnail styles */
+#thumbnails img {
+  width: 80px;
+  height: 80px;
+  object-fit: cover;
+  border-radius: 8px;
+  cursor: pointer;
+  opacity: 0.6;
+  transition: all 0.3s ease;
+  border: 2px solid transparent;
+}
+
+#thumbnails img:hover {
+  opacity: 1;
+  transform: scale(1.1);
+}
+
+#thumbnails img.active {
+  opacity: 1;
+  border-color: #a855f7;
+}
+
+/* Navigation button hover effects */
+#galleryModal button:hover {
+  transform: scale(1.1);
+}
+
+/* === DODGING NO BUTTON === */
+#noButton {
+  position: relative;
+  transition: all 0.3s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+}
+
+#noButton.dodging {
+  pointer-events: none;
+}
+
 /* === RESPONSIVE ADJUSTMENTS === */
 @media (max-width: 768px) {
     .cursor-glow {
@@ -298,6 +345,9 @@ body {
         font-size: 0.875rem;
     }
 }
+
+
+
 
 /* === COLOR PALETTE REFERENCE ===
 Deep Purple: #7c3aed, #6b21a8, #581c87

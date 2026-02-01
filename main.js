@@ -185,6 +185,284 @@ function createConfetti() {
   }
 }
 
+// === GALLERY DATA ===
+// Replace these URLs with your actual images
+const galleries = [
+  // Gallery 1 - Coffee Dates
+  {
+    title: "Coffee Dates ☕",
+    images: [
+      {
+        src: "https://images.unsplash.com/photo-1516589178581-6cd7833ae3b2?w=1200",
+        caption: "Our first coffee together",
+      },
+      {
+        src: "https://images.unsplash.com/photo-1495474472287-4d71bcdd2085?w=1200",
+        caption: "Morning coffee talks",
+      },
+      {
+        src: "https://images.unsplash.com/photo-1509042239860-f550ce710b93?w=1200",
+        caption: "Cozy cafe moments",
+      },
+      {
+        src: "https://images.unsplash.com/photo-1511920170033-f8396924c348?w=1200",
+        caption: "Late afternoon coffee dates",
+      },
+    ],
+  },
+  // Gallery 2 - Your Smile
+  {
+    title: "Your Beautiful Smile 😊",
+    images: [
+      {
+        src: "./assets/smile2.jpeg",
+        caption: "That smile that makes my day",
+      },
+      {
+        src: "./assets/smile1.jpeg",
+        caption: "Always brightening my world",
+      },
+      {
+        src: "./assets/smile4.jpeg",
+        caption: "Pure happiness",
+      },
+      {
+        src: "./assets/smile3.jpeg",
+        caption: "Genuine joy",
+      },
+      {
+        src: "./assets/smile5.jpeg",
+        caption: "Pure happiness",
+      },
+      {
+        src: "./assets/smile6.jpeg",
+        caption: "Genuine joy",
+      },
+    ],
+  },
+  // Gallery 3 - Late Nights
+  {
+    title: "Late Night Conversations 🌙",
+    images: [
+      {
+        src: "./assets/call1.jpeg",
+        caption: "Talking until dawn",
+      },
+      {
+        src: "./assets/call2.jpeg",
+        caption: "Under the stars",
+      },
+      {
+        src: "./assets/call3.jpeg",
+        caption: "Midnight thoughts",
+      },
+      {
+        src: "./assets/call4.jpeg",
+        caption: "Sharing secrets",
+      },
+       {
+        src: "./assets/call5.jpeg",
+        caption: "Talking until dawn",
+      },
+      {
+        src: "./assets/call6.jpeg",
+        caption: "Under the stars",
+      },
+    ],
+  },
+  // Gallery 4 - Adventures
+  {
+    title: "Our Adventures 🌍",
+    images: [
+      {
+        src: "https://images.unsplash.com/photo-1501594907352-04cda38ebc29?w=1200",
+        caption: "Exploring together",
+      },
+      {
+        src: "https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=1200",
+        caption: "Mountain adventures",
+      },
+      {
+        src: "https://images.unsplash.com/photo-1476514525535-07fb3b4ae5f1?w=1200",
+        caption: "Beach days",
+      },
+      {
+        src: "https://images.unsplash.com/photo-1472214103451-9374bd1c798e?w=1200",
+        caption: "New places, new memories",
+      },
+    ],
+  },
+  // Gallery 5 - Special Moments
+  {
+    title: "Special Moments ✨",
+    images: [
+      {
+        src: "https://images.unsplash.com/photo-1518199266791-5375a83190b7?w=1200",
+        caption: "Unforgettable times",
+      },
+      {
+        src: "https://images.unsplash.com/photo-1513506003901-1e6a229e2d15?w=1200",
+        caption: "Celebrating together",
+      },
+      {
+        src: "https://images.unsplash.com/photo-1470225620780-dba8ba36b745?w=1200",
+        caption: "Music and memories",
+      },
+      {
+        src: "https://images.unsplash.com/photo-1467810563316-b5476525c0f9?w=1200",
+        caption: "Creating magic",
+      },
+    ],
+  },
+  // Gallery 6 - Together
+  {
+    title: "Together Forever 💕",
+    images: [
+      {
+        src: "./assets/together2.jpeg",
+        caption: "Side by side",
+      },
+      {
+        src: "./assets/together1.jpeg",
+        caption: "Always together",
+      },
+      {
+        src: "./assets/together3.jpeg",
+        caption: "Perfect moments",
+      },
+      {
+        src: "./assets/together4.jpeg",
+        caption: "Our journey",
+      },
+       {
+        src: "./assets/together5.jpeg",
+        caption: "Side by side",
+      },
+      {
+        src: "./assets/together6.jpeg",
+        caption: "Always together",
+      },
+      {
+        src: "./assets/together7.jpeg",
+        caption: "Perfect moments",
+      },
+    ],
+  },
+];
+
+let currentGalleryIndex = 0;
+let currentImageIndex = 0;
+
+// === OPEN GALLERY ===
+function openGallery(galleryIndex) {
+  currentGalleryIndex = galleryIndex;
+  currentImageIndex = 0;
+
+  const modal = document.getElementById("galleryModal");
+  modal.classList.remove("hidden");
+  modal.classList.add("flex");
+
+  // Prevent body scroll
+  document.body.style.overflow = "hidden";
+
+  updateGalleryDisplay();
+}
+
+// === CLOSE GALLERY ===
+function closeGallery() {
+  const modal = document.getElementById("galleryModal");
+  modal.classList.add("hidden");
+  modal.classList.remove("flex");
+
+  // Restore body scroll
+  document.body.style.overflow = "auto";
+}
+
+// === UPDATE GALLERY DISPLAY ===
+function updateGalleryDisplay() {
+  const gallery = galleries[currentGalleryIndex];
+  const currentImage = gallery.images[currentImageIndex];
+
+  // Update title and counter
+  document.getElementById("galleryTitle").textContent = gallery.title;
+  document.getElementById("galleryCounter").textContent = `${
+    currentImageIndex + 1
+  } / ${gallery.images.length}`;
+
+  // Update main image
+  const galleryImage = document.getElementById("galleryImage");
+  galleryImage.src = currentImage.src;
+  galleryImage.alt = currentImage.caption;
+
+  // Update caption
+  document.getElementById("galleryCaption").textContent = currentImage.caption;
+
+  // Update thumbnails
+  updateThumbnails();
+
+  // Trigger animation
+  galleryImage.style.animation = "none";
+  setTimeout(() => {
+    galleryImage.style.animation = "fadeInScale 0.4s ease";
+  }, 10);
+}
+
+// === UPDATE THUMBNAILS ===
+function updateThumbnails() {
+  const gallery = galleries[currentGalleryIndex];
+  const thumbnailsContainer = document.getElementById("thumbnails");
+  thumbnailsContainer.innerHTML = "";
+
+  gallery.images.forEach((image, index) => {
+    const thumbnail = document.createElement("img");
+    thumbnail.src = image.src;
+    thumbnail.alt = image.caption;
+    thumbnail.onclick = () => {
+      currentImageIndex = index;
+      updateGalleryDisplay();
+    };
+
+    if (index === currentImageIndex) {
+      thumbnail.classList.add("active");
+    }
+
+    thumbnailsContainer.appendChild(thumbnail);
+  });
+}
+
+// === PREVIOUS IMAGE ===
+function previousImage() {
+  const gallery = galleries[currentGalleryIndex];
+  currentImageIndex =
+    currentImageIndex === 0 ? gallery.images.length - 1 : currentImageIndex - 1;
+  updateGalleryDisplay();
+}
+
+// === NEXT IMAGE ===
+function nextImage() {
+  const gallery = galleries[currentGalleryIndex];
+  currentImageIndex =
+    currentImageIndex === gallery.images.length - 1 ? 0 : currentImageIndex + 1;
+  updateGalleryDisplay();
+}
+
+// === KEYBOARD NAVIGATION ===
+document.addEventListener("keydown", (e) => {
+  const modal = document.getElementById("galleryModal");
+  if (!modal.classList.contains("hidden")) {
+    if (e.key === "ArrowLeft") previousImage();
+    if (e.key === "ArrowRight") nextImage();
+    if (e.key === "Escape") closeGallery();
+  }
+});
+
+// === CLICK OUTSIDE TO CLOSE ===
+document.getElementById("galleryModal").addEventListener("click", (e) => {
+  if (e.target.id === "galleryModal") {
+    closeGallery();
+  }
+});
+
 // === HANDLE YES BUTTON ===
 function handleYes() {
   // Create confetti explosion
@@ -267,6 +545,78 @@ document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
       });
     }
   });
+});
+
+// === DODGING NO BUTTON ===
+const noButton = document.getElementById("noButton");
+let isDodging = false;
+
+function dodgeButton(e) {
+  if (isDodging) return;
+
+  const buttonRect = noButton.getBoundingClientRect();
+  const buttonCenterX = buttonRect.left + buttonRect.width / 2;
+  const buttonCenterY = buttonRect.top + buttonRect.height / 2;
+
+  // Get cursor position (works for both mouse and touch)
+  const cursorX = e.type.includes("touch") ? e.touches[0].clientX : e.clientX;
+  const cursorY = e.type.includes("touch") ? e.touches[0].clientY : e.clientY;
+
+  // Calculate distance between cursor and button center
+  const distanceX = cursorX - buttonCenterX;
+  const distanceY = cursorY - buttonCenterY;
+  const distance = Math.sqrt(distanceX * distanceX + distanceY * distanceY);
+
+  // Detection radius - button will dodge when cursor is within this distance
+  const detectionRadius = 150;
+
+  if (distance < detectionRadius) {
+    isDodging = true;
+    noButton.classList.add("dodging");
+
+    // Calculate dodge direction (opposite to cursor)
+    const angle = Math.atan2(distanceY, distanceX);
+    const dodgeDistance = 150; // How far the button moves
+
+    const moveX = -Math.cos(angle) * dodgeDistance;
+    const moveY = -Math.sin(angle) * dodgeDistance;
+
+    // Get viewport dimensions
+    const viewportWidth = window.innerWidth;
+    const viewportHeight = window.innerHeight;
+
+    // Calculate new position
+    let newX = buttonCenterX + moveX;
+    let newY = buttonCenterY + moveY;
+
+    // Keep button within viewport bounds
+    const margin = 100;
+    newX = Math.max(margin, Math.min(viewportWidth - margin, newX));
+    newY = Math.max(margin, Math.min(viewportHeight - margin, newY));
+
+    // Apply transform
+    const finalMoveX = newX - buttonCenterX;
+    const finalMoveY = newY - buttonCenterY;
+
+    noButton.style.transform = `translate(${finalMoveX}px, ${finalMoveY}px) scale(1.1)`;
+
+    // Reset after animation
+    setTimeout(() => {
+      isDodging = false;
+      noButton.classList.remove("dodging");
+    }, 300);
+  }
+}
+
+// Add event listeners for both mouse and touch
+document.addEventListener("mousemove", dodgeButton);
+document.addEventListener("touchmove", dodgeButton);
+
+// Optional: Reset button position when mouse/touch leaves the area
+noButton.addEventListener("mouseleave", () => {
+  setTimeout(() => {
+    noButton.style.transform = "translate(0, 0) scale(1)";
+  }, 500);
 });
 
 // === CONSOLE MESSAGE ===

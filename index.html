@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
   <head>
     <!-- Basic Meta Tags -->
@@ -272,115 +272,116 @@
           >
             Our Memories
           </h2>
-          <p class="text-xl text-purple-200 mt-4">Moments I cherish forever</p>
+          <p class="text-xl text-purple-200 mt-4">
+            Click to explore each moment
+          </p>
         </div>
 
         <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-          <!-- Memory 1 - Replace with your image -->
-          <div class="memory-card aspect-square reveal">
-            <img
-              src="https://images.unsplash.com/photo-1516589178581-6cd7833ae3b2?w=800&h=800&fit=crop"
-              alt="Romantic coffee date"
-            />
-            <div class="memory-overlay">
-              <div>
-                <p class="text-lg font-semibold text-white">
-                  First coffee together
-                </p>
-                <p class="text-sm text-purple-300 mt-1">
-                  Replace: /path/to/your-photo1.jpg
-                </p>
-              </div>
-            </div>
-          </div>
-
-          <!-- Memory 2 - Replace with your video -->
-          <div class="memory-card aspect-square reveal">
-            <video muted loop playsinline>
-              <source
-                src="https://assets.mixkit.co/videos/preview/mixkit-couple-walking-on-the-beach-at-sunset-4614-large.mp4"
-                type="video/mp4"
-              />
-            </video>
-            <div class="memory-overlay">
-              <div>
-                <p class="text-lg font-semibold text-white">That sunset walk</p>
-                <p class="text-sm text-purple-300 mt-1">
-                  Replace: /path/to/your-video1.mp4
-                </p>
-              </div>
-            </div>
-          </div>
-
-          <!-- Memory 3 - Replace with your image -->
-          <div class="memory-card aspect-square reveal">
-            <img
-              src="https://images.unsplash.com/photo-1522556189639-b150ed9c4330?w=800&h=800&fit=crop"
-              alt="Beautiful smile"
-            />
-            <div class="memory-overlay">
-              <div>
-                <p class="text-lg font-semibold text-white">
-                  Your beautiful smile
-                </p>
-                <p class="text-sm text-purple-300 mt-1">
-                  Replace: /path/to/your-photo2.jpg
-                </p>
-              </div>
-            </div>
-          </div>
-
-          <!-- Memory 4 - Replace with your image -->
-          <div class="memory-card aspect-square reveal">
-            <img
-              src="https://images.unsplash.com/photo-1511988617509-a57c8a288659?w=800&h=800&fit=crop"
-              alt="Late night talks"
-            />
-            <div class="memory-overlay">
-              <div>
-                <p class="text-lg font-semibold text-white">
-                  Late night conversations
-                </p>
-                <p class="text-sm text-purple-300 mt-1">
-                  Replace: /path/to/your-photo3.jpg
-                </p>
-              </div>
-            </div>
-          </div>
-
-          <!-- Memory 5 - Replace with your video -->
-          <div class="memory-card aspect-square reveal">
-            <video muted loop playsinline>
-              <source
-                src="https://assets.mixkit.co/videos/preview/mixkit-rain-falling-on-the-water-of-a-lake-2104-large.mp4"
-                type="video/mp4"
-              />
+          <!-- Memory Card 1 - Video -->
+          <div class="memory-card aspect-[3/4] reveal cursor-pointer">
+            <video muted loop playsinline class="w-full h-full object-cover">
+              <source src="./assets/video4.mp4" , type="video/mp4" />
+              Your browser does not support the video tag.
             </video>
             <div class="memory-overlay">
               <div>
                 <p class="text-lg font-semibold text-white">
-                  Dancing in the rain
+                  Our Video Together
                 </p>
+                <p class="text-sm text-purple-300 mt-1">hover on it to play</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Memory Card 2 -->
+          <div
+            class="memory-card aspect-[3/4] reveal cursor-pointer"
+            onclick="openGallery(1)"
+          >
+            <img
+              src="./assets/smile4.jpeg"
+              ,
+              alt="Your smile"
+              class="w-full h-full object-cover"
+            />
+            <div class="memory-overlay">
+              <div>
+                <p class="text-lg font-semibold text-white">Your Smile 😊</p>
                 <p class="text-sm text-purple-300 mt-1">
-                  Replace: /path/to/your-video2.mp4
+                  Click to see more memories
                 </p>
               </div>
             </div>
           </div>
 
-          <!-- Memory 6 - Replace with your image -->
-          <div class="memory-card aspect-square reveal">
+          <!-- Memory Card 3 -->
+          <div
+            class="memory-card aspect-[3/4] reveal cursor-pointer"
+            onclick="openGallery(2)"
+          >
             <img
-              src="https://images.unsplash.com/photo-1501594907352-04cda38ebc29?w=800&h=800&fit=crop"
-              alt="Adventures"
+              src="./assets/call2.jpeg"
+              alt="Late nights"
+              class="w-full h-full object-cover"
             />
             <div class="memory-overlay">
               <div>
-                <p class="text-lg font-semibold text-white">
-                  Adventure together
-                </p>
+                <p class="text-lg font-semibold text-white">Late Nights 🌙</p>
                 <p class="text-sm text-purple-300 mt-1">
-                  Replace: /path/to/your-photo4.jpg
+                  Click to see more memories
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Memory Card 4 -->
+          <div class="memory-card aspect-[3/4] reveal cursor-pointer">
+            <video muted loop playsinline class="w-full h-full object-cover">
+              <source src="./assets/video1.mp4" , type="video/mp4" />
+              Your browser does not support the video tag.
+            </video>
+            <div class="memory-overlay">
+              <div>
+                <p class="text-lg font-semibold text-white">
+                  Our Video Together
+                </p>
+                <p class="text-sm text-purple-300 mt-1">hover on it to play</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Memory Card 5 -->
+          <div class="memory-card aspect-[3/4] reveal cursor-pointer">
+            <video muted loop playsinline class="w-full h-full object-cover">
+              <source src="./assets/video2.mp4" , type="video/mp4" />
+              Your browser does not support the video tag.
+            </video>
+            <div class="memory-overlay">
+              <div>
+                <p class="text-lg font-semibold text-white">
+                  Our Video Together
+                </p>
+                <p class="text-sm text-purple-300 mt-1">hover on it to play</p>
+              </div>
+            </div>
+          </div>
+          <!-- Memory Card 6 -->
+          <div
+            class="memory-card aspect-[3/4] reveal cursor-pointer"
+            onclick="openGallery(5)"
+          >
+            <img
+              src="./assets/together3.jpeg"
+              ,
+              alt="Together"
+              class="w-full h-full object-cover"
+            />
+            <div class="memory-overlay">
+              <div>
+                <p class="text-lg font-semibold text-white">Together 💕</p>
+                <p class="text-sm text-purple-300 mt-1">
+                  Click to see more memories
                 </p>
               </div>
             </div>
@@ -388,6 +389,62 @@
         </div>
       </div>
     </section>
+
+    <!-- Gallery Modal -->
+    <div
+      id="galleryModal"
+      class="fixed inset-0 bg-black/95 z-50 hidden items-center justify-center"
+    >
+      <button
+        onclick="closeGallery()"
+        class="absolute top-8 right-8 text-white text-4xl hover:text-purple-400 transition z-50"
+      >
+        ✕
+      </button>
+
+      <button
+        onclick="previousImage()"
+        class="absolute left-4 md:left-8 text-white text-5xl hover:text-purple-400 transition z-50"
+      >
+        ‹
+      </button>
+
+      <button
+        onclick="nextImage()"
+        class="absolute right-4 md:right-8 text-white text-5xl hover:text-purple-400 transition z-50"
+      >
+        ›
+      </button>
+
+      <div class="max-w-6xl max-h-[90vh] w-full px-4">
+        <div class="text-center mb-8">
+          <h3
+            id="galleryTitle"
+            class="text-3xl md:text-5xl font-bold bg-gradient-to-r from-purple-400 to-pink-400 bg-clip-text text-transparent mb-2"
+          ></h3>
+          <p id="galleryCounter" class="text-purple-300 text-lg"></p>
+        </div>
+
+        <div class="relative">
+          <img
+            id="galleryImage"
+            src=""
+            alt="Memory"
+            class="w-full h-auto max-h-[70vh] object-contain rounded-lg"
+          />
+          <p
+            id="galleryCaption"
+            class="text-center text-purple-200 mt-4 text-lg"
+          ></p>
+        </div>
+
+        <!-- Thumbnail Navigation -->
+        <div
+          id="thumbnails"
+          class="flex gap-2 justify-center mt-6 overflow-x-auto pb-2"
+        ></div>
+      </div>
+    </div>
 
     <!-- Interactive Hidden Messages -->
     <section
@@ -423,7 +480,7 @@
             </div>
             <div class="card-back">
               <p class="text-md md:text-xl md:text-2xl font-bold text-white">
-               I never thought I’d care for the girl I fought with.
+                I never thought I’d care for the girl I fought with.
               </p>
             </div>
           </div>
@@ -602,9 +659,10 @@
             </button>
 
             <button
+              id="noButton"
               class="px-16 py-6 bg-transparent border-2 border-purple-500 rounded-full text-2xl font-bold transform transition-all duration-300 hover:scale-110 hover:bg-purple-900/30"
             >
-              LET'S TALK
+              NO
             </button>
           </div>
         </div>
